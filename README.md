@@ -1,98 +1,167 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Content Planner
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A lightweight internal content management application built with Next.js and TypeScript to streamline marketing content production.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project was created to explore workflow-driven application design, CRUD operations, and dashboard development by modelling a real content production pipeline used by internal marketing teams.
 
-## Description
+Unlike traditional project management platforms, this application intentionally focuses on a single shared workspace where team members collaborate on content creation, assign ownership, update progress, and move tasks through predefined production stages.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Rather than trying to become a full-scale project management system, the application focuses on solving one business problem exceptionally well: managing the lifecycle of marketing content.
 
-## Project setup
+## Live Demo
 
-```bash
-$ npm install
+https://team-task-calendar.onrender.com/
+
+## Screenshots
+
+### Dashboard
+
+(Add screenshot)
+
+### Task Management
+
+(Add screenshot)
+
+### Workflow Board
+
+(Add screenshot)
+
+### Mobile View
+
+(Add screenshot)
+
+## Features
+
+* Create new content tasks
+* Edit existing tasks
+* Delete tasks
+* Assign internal team members
+* Track production progress
+* Organize content by workflow stage
+* Filter tasks by status
+* Responsive dashboard
+* Modal-based task management
+* Lightweight monolithic architecture
+
+## Workflow
+
+Tasks progress through a structured content production pipeline:
+
+```text
+Idea
+   ↓
+Draft
+   ↓
+Ready
+   ↓
+Posted
 ```
 
-## Compile and run the project
+Content can also be categorized by type, including:
+
+* Reels
+* Carousels
+
+This workflow was designed to mirror a real marketing team's content production process, making it easier to visualize work in progress and identify bottlenecks.
+
+## Technologies Used
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Render
+
+## Architecture Highlights
+
+This application was intentionally designed as a lightweight internal business tool.
+
+Instead of supporting multiple organizations, user accounts, or complex permission systems, it operates as a shared workspace protected by a single application password. Team members are selected from predefined internal users, keeping the application simple, efficient, and aligned with its intended use case.
+
+This design decision demonstrates an important software engineering principle: choosing an architecture that fits the business problem instead of introducing unnecessary complexity.
+
+## What I Learned
+
+During this project I gained experience with:
+
+* Building internal business applications
+* Designing workflow-oriented user interfaces
+* Creating reusable CRUD operations
+* Managing application state
+* Building dashboard-style interfaces
+* Designing reusable modal components
+* Structuring applications around business processes
+* Organizing data using workflow-driven models
+* Building focused software that solves a specific operational problem
+
+## Challenges
+
+Some of the challenges encountered during development included:
+
+* Designing an intuitive content production workflow
+* Keeping the interface simple while supporting multiple production stages
+* Managing form interactions efficiently
+* Building reusable modal components
+* Organizing application state across multiple views
+* Creating a dashboard that remained lightweight and easy to use
+* Designing around a real business workflow instead of generic task management
+
+These challenges reinforced the importance of balancing usability, maintainability, and business requirements during application development.
+
+## Installation
 
 ```bash
-# development
-$ npm run start
+git clone https://github.com/axce-j/team-task-tracker.git
 
-# watch mode
-$ npm run start:dev
+cd team-task-tracker
 
-# production mode
-$ npm run start:prod
+npm install
+
+npm run dev
 ```
 
-## Run tests
+## Looking Back
 
-```bash
-# unit tests
-$ npm run test
+This project marked an important shift in my development journey from building general-purpose applications to designing software around real business operations.
 
-# e2e tests
-$ npm run test:e2e
+Rather than adding features simply for complexity, I focused on creating a lightweight internal tool that solved a clearly defined operational need for managing marketing content production.
 
-# test coverage
-$ npm run test:cov
-```
+Since completing this project, I have continued building larger systems involving:
 
-## Deployment
+* Full-stack business applications
+* Workflow automation
+* Authentication and authorization systems
+* AI-powered platforms
+* Database architecture
+* Cloud deployment
+* Scalable application design
+* Product and platform engineering
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+It reinforced one of the most valuable lessons in software engineering: the best architecture is not always the most complex one, but the one that best fits the problem being solved.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+I have intentionally preserved this project as part of my software engineering journey and as a record of my growth in designing business-focused applications.
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+## Future Improvements
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Potential future enhancements include:
 
-## Resources
+* Calendar-based content scheduling
+* Drag-and-drop workflow management
+* File and media attachments
+* Content approval workflows
+* Team notifications
+* Analytics dashboard
+* Role-based permissions
+* Search and advanced filtering
+* Activity history
+* Integration with social media publishing platforms
 
-Check out a few resources that may come in handy when working with NestJS:
+## Author
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+**Obinna Jachike Ezeani**
 
-## Support
+Software Engineer | Product Builder | Co-Founder
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+GitHub: https://github.com/axce
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+LinkedIn: https://www.linkedin.com/in/obinna-jachike-ezeani-a072b9284/
